@@ -23,12 +23,15 @@ class SuccessPage extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 60),
+            // Check icon
             const CircleAvatar(
               radius: 40,
               backgroundColor: Colors.black,
               child: Icon(Icons.check, color: Colors.white, size: 40),
             ),
             const SizedBox(height: 20),
+
+            // Title
             const Text(
               "Booking Successful",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -40,6 +43,8 @@ class SuccessPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
+
+            // Booking details card
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(16),
@@ -57,7 +62,7 @@ class SuccessPage extends StatelessWidget {
                   const SizedBox(height: 12),
 
                   _buildDetailRow("Court Name", title),
-                  _buildDetailRow("Date", "Dec 15"),
+                  _buildDetailRow("Date", "Dec 15"), // nanti bisa diganti dynamic
                   _buildDetailRow("Duration", "$duration hours"),
                   _buildDetailRow("Payment Method", type),
                   const Divider(),
@@ -70,6 +75,8 @@ class SuccessPage extends StatelessWidget {
               ),
             ),
             const Spacer(),
+
+            // Buttons
             SizedBox(
               width: double.infinity,
               child: ElevatedButton.icon(
@@ -81,7 +88,7 @@ class SuccessPage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  
+                  // TODO: implement download receipt
                 },
                 icon: const Icon(Icons.download, color: Colors.white),
                 label: const Text(

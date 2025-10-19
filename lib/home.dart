@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sewa_lapangan/duration.dart';
+import 'package:sewa_lapangan/history_page.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -139,6 +141,21 @@ class _HomePage extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
+        actions: [
+      // Ini adalah widget tombol ikon
+      IconButton(
+        icon: const Icon(Icons.history), // Menggunakan ikon jam/riwayat
+        tooltip: 'Riwayat Pemesanan',   // Teks bantuan saat ikon ditekan lama
+        onPressed: () {
+          // --- INI BAGIAN PENTINGNYA ---
+          // Perintah untuk pindah ke halaman HistoryPage
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HistoryPage()),
+          );
+        },
+      ),
+    ],
         elevation: 0,
         title: Text(
           "Rent A Field",

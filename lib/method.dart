@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sewa_lapangan/history_page.dart';
 import 'package:sewa_lapangan/qris.dart';
 import 'package:sewa_lapangan/success.dart';
 
@@ -28,7 +29,11 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text("Payment Method"),
+        backgroundColor: Colors.white,
+        title: Text(
+          "Payment Method",
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
         elevation: 0,
       ),

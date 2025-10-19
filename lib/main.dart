@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sewa Lapangan App',
       debugShowCheckedModeBanner: false,
-      home: LandingPage(), // Pastikan LandingPage() tidak memiliki 'const'
+      home: LandingPage(),
     );
   }
 }

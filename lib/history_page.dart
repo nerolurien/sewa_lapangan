@@ -4,12 +4,10 @@ import 'package:intl/intl.dart';
 class BookingHistory {
   final String courtName;
   final String courtType;
-  final String bookingDate; // String untuk data dummy
+  final String bookingDate;
   final int totalPrice;
   final String status;
 
-  // ===== INI PERBAIKANNYA =====
-  // Cukup tambahkan 'const' di sini agar class ini bisa dibuat sebagai const
   const BookingHistory({
     required this.courtName,
     required this.courtType,
@@ -22,7 +20,6 @@ class BookingHistory {
 class HistoryPage extends StatelessWidget {
   const HistoryPage({super.key});
 
-  // Sekarang 'const' di sini tidak akan error lagi
   final List<BookingHistory> bookings = const [
     BookingHistory(
       courtName: "Cihuni Futsal",

@@ -16,7 +16,6 @@ class _HomePage extends State<HomePage> {
     return 'Rp ${price.toString().replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => '${m[1]}.')}';
   }
 
-  // Widget untuk bikin card field rent
   Widget _buildFieldRent({
     required String title,
     required String type,
@@ -142,13 +141,10 @@ class _HomePage extends State<HomePage> {
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         actions: [
-      // Ini adalah widget tombol ikon
       IconButton(
-        icon: const Icon(Icons.history), // Menggunakan ikon jam/riwayat
-        tooltip: 'Riwayat Pemesanan',   // Teks bantuan saat ikon ditekan lama
+        icon: const Icon(Icons.history),
+        tooltip: 'Riwayat Pemesanan',
         onPressed: () {
-          // --- INI BAGIAN PENTINGNYA ---
-          // Perintah untuk pindah ke halaman HistoryPage
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const HistoryPage()),
